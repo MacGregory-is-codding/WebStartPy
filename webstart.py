@@ -14,15 +14,15 @@ if __name__ == '__main__':
     Tk().withdraw()
 
     paths['root']    = askdirectory(title='Select folder')
-    paths['project'] = os.path.join(paths['root'], 'webstart')
+    paths['project'] = os.path.join(paths['root'],    'webstart')
     paths['assets']  = os.path.join(paths['project'], 'assets')
-    paths['script']  = os.path.join(paths['assets'],  'script')
-    paths['style']   = os.path.join(paths['assets'],  'style')
+    paths['js']      = os.path.join(paths['assets'],  'js')
+    paths['css']     = os.path.join(paths['assets'],  'css')
 
     files = [
         FilePath(paths['project'], 'index.html'),
-        FilePath(paths['script'],  'script.js'),
-        FilePath(paths['style'],   'style.css'),
+        FilePath(paths['js'],      'script.js'),
+        FilePath(paths['css'],     'style.css'),
     ]
 
     for file in files:
