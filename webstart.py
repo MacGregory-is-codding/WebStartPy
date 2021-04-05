@@ -29,6 +29,6 @@ if __name__ == '__main__':
         try:
             if not os.path.exists(file.path):
                 os.makedirs(file.path)
-            open(os.path.join(file.path, file.name), 'x').close()
+            open(os.path.join(file.path, file.name), 'w').close()
         except OSError as e:
             print('Ooopss... %s' %e)
